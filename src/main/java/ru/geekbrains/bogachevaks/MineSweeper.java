@@ -35,7 +35,7 @@ public class MineSweeper {
         do{
             System.out.println("Выберите уровень:\n1. 5 x 5\n2. 10 x 10\n3. 15 x 15");
             LEVEL = scanner.nextInt();
-        }while(LEVEL < 0 || LEVEL > 3);
+        }while(LEVEL <= 0 || LEVEL > 3);
         height = LEVEL * HEIGHT;
         width = LEVEL * WIDTH;
         mineCnt = LEVEL * MINE_CNT;
@@ -52,7 +52,7 @@ public class MineSweeper {
         boolean win = true;
         boolean isPassMove;
         int[][] board = generateBoard();
-        printBoard(board);
+        //printBoard(board);
         int[][] moves = new int[height][width];
         for (int[] row : moves){
             Arrays.fill(row, CELL_CLOSE);
