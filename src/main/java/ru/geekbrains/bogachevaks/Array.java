@@ -42,6 +42,7 @@ public class Array {
                 catch (NumberFormatException e){
                     throw new MyArrayDataException(i, j);
                 }
+
             }
         }
         return sum;
